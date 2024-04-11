@@ -14,8 +14,10 @@ $text-color-light: hsl(0, 0%, 64%);
 $body-color: hsl(0, 0%, 87%);
 $container-color: hsl(0, 0%, 83%);
 
-//typography
+//font
 $font-family: "Bai Jamjuree", sans-serif;
+
+//typography
 $biggest-font-size: 2.5rem;
 $h1: 1.75rem;
 $h2: 1.25rem;
@@ -23,10 +25,20 @@ $h3: 1.125rem;
 $normal-font-size: .938rem;
 $small-font-size: .813rem;
 $smaller-font-size: .75rem;
+
+//font weight
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
+//z-index
+$z-tooltip: 10;
+$z-fixed: 100;
+
+//responsive typography
+@media screen and (min-width: 1150px){
+    
+}
 
 //BASE
 * {
@@ -126,9 +138,43 @@ img {
         left: -5px;
         top: -5px;
     }
+}
 
-    .main {
-        overflow: hidden;
-    }
+.main {
+    overflow: hidden;
+}
+
+// HEADER, NAV
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $body-color;
+    z-index: $z-fixed;
+    transition: box-shadow .4s;
+}
+
+.nav {
+    position: relative;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    display: flex;
+    column-gap: .5rem;
+    align-items: center;
+    font-weight: $font-weight-semibold;
+    color: $title-color;
+}
+
+.nav__logo-circle,
+.nav__toggle {
+    width: 32px;
+    height: 32px;
+    background-color: $black;
 }
 
