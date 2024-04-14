@@ -195,13 +195,13 @@ img {
 @media screen and (max-width: 1150px){
     .nav__menu {
         position: fixed;
-        top: 0;
+        top: -100%; //para esconder
         left: 0;
         background-color: hsla(0, 0%, 0%, .75);
         width: 100%;
         text-align: center;
         backdrop-filter: blur(8px);
-        transition: top .4;
+        transition: top .4s;
         padding-block: 1.8rem 5rem;
 
             .nav__title, 
@@ -239,6 +239,52 @@ img {
                     right: -4rem;
                 }
             }
+
+            .nav__list {
+                display: flex;
+                flex-direction: column;
+                row-gap: 2.5rem;
+
+                & .nav__link {
+                    position: relative;
+                    color: $text-color-light;
+                    font-size: $h3;
+                    font-weight: $font-weight-semibold;
+                    transition: color .3s;
+
+                    &::after {
+                        content: '';
+                        width: 0;
+                        height: 2px;
+                        background-color: $white;
+                        position: absolute;
+                        left: 0;
+                        bottom: -.5rem;
+                        transition: width .3s;
+                    }
+
+                    &:hover {
+                        color: $white;
+                    }
+
+                    &:hover::after {
+                        width: 25%;
+                    }
+                }
+            }
+
+            .nav__close {
+                position: absolute;
+                font-size: 1.5rem;
+                top: 1rem;
+                right: 1.5rem;
+                cursor: pointer;
+            }
+    }
+
+    // main.js
+    .show-menu {
+        top: 0;
     }
 }
 
