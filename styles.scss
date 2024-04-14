@@ -76,7 +76,7 @@ img {
     height: auto;
 }
 
-// reusable
+// common 
 .container {
     max-width: 1120px;
     margin-inline: 1.5rem;
@@ -126,7 +126,7 @@ img {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: $first-color;
+    background-color: $red;
     rotate: -30deg;
 
     &::after{
@@ -153,28 +153,93 @@ img {
     background-color: $body-color;
     z-index: $z-fixed;
     transition: box-shadow .4s;
+
+    .nav {
+        position: relative;
+        height: $header-height;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav__logo {
+            display: flex;
+            column-gap: .5rem;
+            align-items: center;
+            font-weight: $font-weight-semibold;
+            color: $title-color;
+        }
+        
+        .nav__logo-circle,
+        .nav__toggle {
+        width: 32px;
+        height: 32px;
+        background-color: $black;
+        color: $white;
+        display: grid;
+        place-items: center;
+        }
+
+        .nav__logo-circle {
+            border-radius: 50%;
+        }
+
+        .nav__toggle {
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+    }
+    
 }
 
-.nav {
-    position: relative;
-    height: $header-height;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+@media screen and (max-width: 1150px){
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: hsla(0, 0%, 0%, .75);
+        width: 100%;
+        text-align: center;
+        backdrop-filter: blur(8px);
+        transition: top .4;
+        padding-block: 1.8rem 5rem;
+
+            .nav__title, 
+            .nav__name, 
+            .nav__close {
+                color: $white;
+            }
+
+            .nav__title {
+                display: block;
+                font-size: $smaller-font-size;
+                font-weight: $font-weight-semibold;
+                margin-bottom: 3.5rem;
+            }
+
+            .nav__name {
+                position: relative;
+                width: max-content;
+                margin: 0 auto 3rem;
+                font-size: $h2;
+
+                &::after,
+                &::before {
+                    content: '';
+                    width: 40px;
+                    height: 1px;
+                    background-color: $text-color-light;
+                    position: absolute;
+                    top: 50%;
+                    left: -4rem;
+                }
+
+                &::before {
+                    left: initial;
+                    right: -4rem;
+                }
+            }
+    }
 }
 
-.nav__logo {
-    display: flex;
-    column-gap: .5rem;
-    align-items: center;
-    font-weight: $font-weight-semibold;
-    color: $title-color;
-}
-
-.nav__logo-circle,
-.nav__toggle {
-    width: 32px;
-    height: 32px;
-    background-color: $black;
-}
-
+ 

@@ -70,4 +70,117 @@ img {
   position: absolute;
   top: -4px;
   right: -8px;
+}
+
+.section__title--2::after {
+  top: initial;
+  bottom: -4px;
+}
+
+.geometric-box {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: hsl(14, 98%, 50%);
+  rotate: -30deg;
+}
+.geometric-box::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 3px solid hsl(0, 0%, 0%);
+  left: -5px;
+  top: -5px;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsl(0, 0%, 87%);
+  z-index: 100;
+  transition: box-shadow 0.4s;
+}
+.header .nav {
+  position: relative;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav .nav__logo {
+  display: flex;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  align-items: center;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+}
+.header .nav .nav__logo-circle,
+.header .nav .nav__toggle {
+  width: 32px;
+  height: 32px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 95%);
+  display: grid;
+  place-items: center;
+}
+.header .nav .nav__logo-circle {
+  border-radius: 50%;
+}
+.header .nav .nav__toggle {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 0%, 0.75);
+    width: 100%;
+    text-align: center;
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    transition: top 0.4;
+    padding-block: 1.8rem 5rem;
+  }
+  .nav__menu .nav__title,
+  .nav__menu .nav__name,
+  .nav__menu .nav__close {
+    color: hsl(0, 0%, 95%);
+  }
+  .nav__menu .nav__title {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+  }
+  .nav__menu .nav__name {
+    position: relative;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto 3rem;
+    font-size: 1.25rem;
+  }
+  .nav__menu .nav__name::after, .nav__menu .nav__name::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: hsl(0, 0%, 64%);
+    position: absolute;
+    top: 50%;
+    left: -4rem;
+  }
+  .nav__menu .nav__name::before {
+    left: initial;
+    right: -4rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
