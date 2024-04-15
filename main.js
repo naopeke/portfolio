@@ -28,7 +28,7 @@ const linkAction = () => {
     const navMenu = document.getElementById('nav-menu');
     navMenu.classList.remove('show-menu');
 }
-navLink.forEach(navlink => navlink.addEventListener('click', linkAction));
+navLink.forEach(item => item.addEventListener('click', linkAction));
 
 
 //*change background header
