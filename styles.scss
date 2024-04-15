@@ -195,6 +195,7 @@ img {
 @media screen and (max-width: 1150px){
     .nav__menu {
         position: fixed;
+        // top: 0;
         top: -100%; //para esconder
         left: 0;
         background-color: hsla(0, 0%, 0%, .75);
