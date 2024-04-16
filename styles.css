@@ -517,4 +517,157 @@ img {
 }
 .projects__link:hover, .projects__link:hover i {
   color: hsl(14, 98%, 50%);
+}
+
+.contact {
+  padding-bottom: 0;
+}
+
+.contact__container {
+  position: relative;
+  grid-template-rows: 300px max-content max-content;
+  row-gap: 0;
+}
+
+.contact__data {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: hsl(0, 0%, 83%);
+  padding: 3rem 1.5rem 3.5rem;
+  margin-left: auto;
+  border-bottom: 4px solid hsl(14, 98%, 50%);
+  z-index: 5;
+  transition: background-color 0.4s;
+}
+.contact__data .section__title--2 {
+  margin: 0 0 1.5rem;
+  transform: translateX(-3rem);
+}
+
+.contact__description--1 {
+  color: hsl(0, 0%, 0%);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.contact__description--2 {
+  color: hsl(0, 0%, 0%);
+  font-size: 0.813rem;
+}
+
+.contact__mail {
+  position: relative;
+  background-color: hsl(0, 0%, 0%);
+  padding: 5rem 1.5rem 2.5rem;
+  margin-top: -2.5rem;
+  transition: background-color 0.4s;
+}
+
+.contact__title {
+  color: hsl(0, 0%, 95%);
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact__form,
+.contact__group {
+  display: grid;
+  row-gap: 1.25rem;
+}
+
+.contact__form {
+  position: relative;
+}
+
+.contact__box {
+  position: relative;
+  width: 100%;
+  height: 58px;
+}
+
+.contact__input,
+.contact__button {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 0.938rem;
+  outline: none;
+  border: none;
+}
+
+.contact__input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 0%);
+  border: 3px solid hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 95%);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: border 0.4s, background-color 0.4s;
+}
+.contact__input::-moz-placeholder {
+  color: hsl(0, 0%, 64%);
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.contact__input::placeholder {
+  color: hsl(0, 0%, 64%);
+  transition: opacity 0.4s;
+}
+.contact__input:focus {
+  border: 3px solid hsl(0, 0%, 95%);
+}
+.contact__input:-webkit-autofill {
+  -webkit-transition: background-color 6000s, color 6000s;
+  transition: background-color 6000s, color 6000s;
+}
+.contact__input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.contact__input:focus::placeholder {
+  opacity: 0;
+}
+.contact__input:not(:-moz-placeholder-shown).contact__input:not(:focus) + .contact__label {
+  opacity: 1;
+  top: -16px;
+}
+.contact__input:focus + .contact__label, .contact__input:not(:placeholder-shown).contact__input:not(:focus) + .contact__label {
+  opacity: 1;
+  top: -16px;
+}
+
+.contact__label {
+  position: absolute;
+  top: -16px;
+  left: 10px;
+  color: hsl(0, 0%, 64%);
+  font-size: 0.813rem;
+  font-weight: 500;
+  background-color: hsl(0, 0%, 0%);
+  padding: 8px;
+  pointer-events: none;
+  transition: top 0.4s, opacity 0.4s, background-color 0.4s;
+  opacity: 0;
+}
+
+.contact__form .contact__area {
+  height: 10rem;
+}
+
+.contact__area textarea {
+  resize: none;
+  padding-top: 1rem;
+}
+
+.contact__button {
+  background-color: hsl(14, 98%, 50%);
+}
+
+.contact__social {
+  display: grid;
+  row-gap: 1rem;
+  background-color: hsl(0, 0%, 10%);
+  padding-block: 1rem 2rem;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
