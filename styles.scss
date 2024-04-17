@@ -1119,3 +1119,65 @@ body.dark-theme {
 .show-scroll {
     bottom: 3rem;
 }
+
+
+//MEDIA QUERY
+// smartphone
+@media screen and (max-width: 340px){
+    .container {
+        margin-inline : 1rem;
+    }
+
+    .home__image {
+        width: 180px;
+    }
+
+    .about__image {
+        width: 180px;
+    }
+
+    .about__shadow {
+        height: 330px;
+        right: -2.5rem;
+    }
+
+    .contact__data {
+        width: 100%;
+    }
+}
+
+// tablet
+@media screen and (max-width: 576px){
+    .home__container,
+    .about__container,
+    .projects__container {
+        grid-template-columns: 350px;
+        justify-content: center;
+    }
+
+    .contact__data {
+        width: 350px;
+        padding: 4rem 1.5rem;
+        margin-inline: auto;
+    }
+
+    .contact__container {
+        grid-template-columns: 500px;
+        justify-content: center;
+    }
+
+    .contact__group {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+
+    .contact__social {
+        background-color: transparent;
+    }
+
+    .contact__social-description--1 {
+        color: $text-color;
+    }
+}
+
+// pc
