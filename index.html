@@ -44,8 +44,12 @@
                 </div>
             </div>
 
-            <!-- toggle button -->
+
             <div class="nav__buttons">
+                <!-- theme button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+            
+                <!-- toggle button -->
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-4-line"></i>
                 </div>
@@ -163,15 +167,15 @@
 
                         <div class="projects__buttons">
                             <a href="https://magy-deck.vercel.app/" target="_blank" class="projects__link">
-                                <i class="ri-global-line">View</i>
+                                <i class="ri-global-line"></i>View
                             </a>
 
                             <a href="https://github.com/naopeke/MagyDeck" target="_blank" class="projects__link">
-                                <i class="ri-github-line">View</i>
+                                <i class="ri-github-line"></i>View
                             </a>
 
                             <a href="https://github.com/naopeke/MagyDeck_API" target="_blank" class="projects__link">
-                                <i class="ri-github-line">View</i>
+                                <i class="ri-github-line"></i>View
                             </a>
                         </div>
                     </div>
@@ -195,11 +199,11 @@
 
                         <div class="projects__buttons">
                             <a href="#" target="_blank" class="projects__link">
-                                <i class="ri-global-line"></i>
+                                <i class="ri-global-line"></i>View
                             </a>
 
                             <a href="https://github.com/naopeke/" target="_blank" class="projects__link">
-                                <i class="ri-github-line"></i>
+                                <i class="ri-github-line"></i>View
                             </a>
 
                         </div>
@@ -224,11 +228,11 @@
 
                         <div class="projects__buttons">
                             <a href="#" target="_blank" class="projects__link">
-                                <i class="ri-global-line"></i>
+                                <i class="ri-global-line"></i>View
                             </a>
 
                             <a href="https://github.com/naopeke/" target="_blank" class="projects__link">
-                                <i class="ri-github-line"></i>
+                                <i class="ri-github-line"></i>View
                             </a>
 
                         </div>
@@ -254,11 +258,11 @@
 
                         <div class="projects__buttons">
                             <a href="#" target="_blank" class="projects__link">
-                                <i class="ri-global-line"></i>
+                                <i class="ri-global-line"></i>View
                             </a>
 
                             <a href="https://github.com/naopeke/" target="_blank" class="projects__link">
-                                <i class="ri-github-line"></i>
+                                <i class="ri-github-line"></i>View
                             </a>
 
                         </div>
@@ -281,7 +285,7 @@
                         Feel free to send me a message.
                     </p>
                     <p class="contact__description--2">
-                        Please fill out <b>Name</b> and <b>Email address</b>.
+                        Please fill out your <b>Name</b> and <b>Email address</b>.
                     </p>
                 </div>
 
@@ -293,12 +297,12 @@
                     <form action="" class="contact__form" id="contact-form">
                         <div class="contact__group">
                             <div class="contact__box">
-                                <input type="text" name="user_name" class="contact__input" id="name" required placeholder="First Name">
+                                <input type="text" name="user_firstname" class="contact__input" id="name" required placeholder="First Name">
                                 <label for="name" class="contact__label">First Name</label>
                             </div>
 
                             <div class="contact__box">
-                                <input type="text" name="user_name" class="contact__input" id="name" required placeholder="Last Name">
+                                <input type="text" name="user_lastname" class="contact__input" id="name" required placeholder="Last Name">
                                 <label for="name" class="contact__label">Last Name</label>
                             </div>
 
@@ -306,6 +310,7 @@
                                 <input type="text" name="user_email" class="contact__input" id="email" required placeholder="Email Address">
                                 <label for="email" class="contact__label">Email Address</label>
                             </div>
+                        </div>
 
                             <div class="contact__box">
                                 <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subject">
@@ -316,7 +321,8 @@
                                 <textarea name="user_message" id="message" class="contact__input" required placeholder="Message"></textarea>
                                 <label for="message" class="contact__label">Message</label>
                             </div>
-                        </div>
+
+                            <p class="contact__message" id="contact-message"></p>
 
                         <button type="submit" class="contact__button button">
                             <i class="ri-send-plane-line"></i>Send Message
@@ -327,16 +333,26 @@
                 <div class="contact__social">
                     <div class="contact__social-data">
                         <p class="contact__social-description--1">
-                            Does not send emails
+                            Fill out the form and click the botton to send me a message
                         </p>
-                        <p class="contact__social-description--1">
-                            Write me on my social networks
+                        <p class="contact__social-description--2">
+                            You can also write me on LinkedIn
                         </p>
                     </div>
 
                     <div class="contact__social-links">
-                            <a href="" target="_blank" class="contact__social-link"></a>
+                            <a href="https://www.linkedin.com/in/nao-mukai-205b71207/" target="_blank" class="contact__social-link">
+                                <i class="ri-linkedin-box-line"></i>
+                            </a>                        
                     </div>
+
+                    <!-- <div class="contact__social-links">
+                        <a href="" target="_blank" class="contact__social-link"></a>
+                    </div>
+
+                    <div class="contact__social-links">
+                        <a href="" target="_blank" class="contact__social-link"></a>
+                     </div> -->
 
                 </div>
             </div>
@@ -347,8 +363,35 @@
 
     <!-- FOOTER -->
     <footer class="footer">
+        <div class="footer__container container grid">
+            <ul class="footer__links">
+                <li>
+                    <a href="#about" class="footer__link">About</a>
+                </li>
 
+                <li>
+                    <a href="#projects" class="footer__link">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="footer__link">Contact</a>
+                </li>
+            </ul>
+
+            <span class="footer__copy">
+                &#169: All Rights Reserved By <a href="https://github.com/naopeke">Nao Mukai</a>
+            </span>
+        </div>
     </footer>
+
+    <!-- scrollup -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="main.js"></script>
+
 </body>
 </html>
