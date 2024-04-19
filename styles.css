@@ -93,8 +93,11 @@ body.dark-theme .change-theme {
   top: -4px;
   right: -8px;
 }
+body.dark-theme .section__title--1::after, body.dark-theme .section__title--2::after {
+  background-color: hsla(27, 98%, 50%, 0.678);
+}
 .section__title--2::after {
-  top: initial;
+  top: unset;
   bottom: -4px;
 }
 
@@ -109,7 +112,7 @@ body.dark-theme .change-theme {
   left: 0;
   background-color: hsl(0, 0%, 87%);
   z-index: 100;
-  transition: box-shadow, 0.4s background-color 0.4s;
+  transition: box-shadow, 0.4s;
 }
 body.dark-theme .header {
   background-color: hsl(0, 0%, 8%);
@@ -508,16 +511,20 @@ body.dark-theme .button__ghost i {
 
 .techs__container {
   flex: grid;
-  grid-template-columns: 250px;
   justify-content: center;
   padding: 1rem;
   border: 4px solid hsl(0, 0%, 0%);
 }
+body.dark-theme .techs__container {
+  color: hsl(0, 0%, 95%);
+  background-color: hsl(0, 0%, 12%);
+  border: 4px solid hsl(0, 0%, 64%);
+}
 
 .techs__card {
-  border: 2px solid red;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1.8rem;
 }
@@ -531,6 +538,9 @@ body.dark-theme .button__ghost i {
   background-color: hsl(0, 0%, 83%);
   box-shadow: 0 4px 10px hsl(0, 0%, 0%);
   transition: background-color 0.4s;
+}
+body.dark-theme .techs__border {
+  background-color: hsl(0, 0%, 8%);
 }
 .techs__border:hover {
   box-shadow: 0 4px 10px hsl(0, 0%, 0%);
@@ -682,17 +692,11 @@ body.dark-theme .projects__link:hover, body.dark-theme .projects__link:hover i {
   z-index: 5;
   transition: background-color 0.4s;
 }
-
-.section__title--2 {
+.contact__data .section__title--2 {
   margin: 0 0 1.5rem;
 }
-body.dark-theme .section__title--2 {
+body.dark-theme .contact__data .section__title--2 {
   color: hsl(0, 0%, 0%);
-}
-
-.darktheme .section__title--1::after,
-.darktheme .section__title--2 ::after {
-  background-color: hsla(14, 70%, 50%, 0.2);
 }
 
 .contact__description--1 {
@@ -977,6 +981,7 @@ body.dark-theme ::-webkit-scrollbar-thumb:hover {
 @media screen and (max-width: 576px) {
   .home__container,
   .about__container,
+  .techs__container,
   .projects__container {
     grid-template-columns: 350px;
     justify-content: center;
