@@ -1012,6 +1012,71 @@ body.dark-theme ::-webkit-scrollbar-thumb:hover {
 }
 @media screen and (min-width: 768px) {
   .projects__container {
-    grid-template-columns: repeat(2);
+    grid-template-columns: repeat(2, 350px);
+  }
+}
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+  .section {
+    padding-block: 7rem 2rem;
+  }
+  .section__title--1::after,
+  .section__title--2::after {
+    width: 70px;
+    height: 48px;
+  }
+  .nav {
+    height: cals(5.5rem);
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+  .nav__close,
+  .nav__toggle,
+  .nav__title,
+  .nav__name {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+  .nav__list .nav__link {
+    color: hsl(0, 0%, 35%);
+    font-size: 0.938rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .nav__list .nav__link:hover {
+    color: hsl(0, 0%, 0%);
+  }
+  .nav__list .nav__link::after {
+    background-color: hsl(0, 0%, 0%);
+  }
+  .active-link {
+    color: hsl(0, 0%, 0%) !important;
+  }
+  .nav__menu {
+    margin-left: auto;
+  }
+  .nav__link-button {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 95%) !important;
+    padding: 1.1rem 1.5rem;
+  }
+  .nav__link-button:hover {
+    color: hsl(0, 0%, 95%);
+  }
+  .nav__link-button::after {
+    background-color: transparent;
+  }
+  .change-theme {
+    color: hsl(0, 0%, 35%);
+  }
+  .change-theme:hover {
+    color: hsl(0, 0%, 0%);
   }
 }/*# sourceMappingURL=styles.css.map */
