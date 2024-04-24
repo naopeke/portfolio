@@ -373,6 +373,9 @@ body.dark-theme .home__shadow {
   place-items: center;
   transition: background-color 0.3s;
 }
+body.dark-theme .home__social-link {
+  background-color: hsl(0, 0%, 40%);
+}
 .home__social-link:hover {
   background-color: hsl(32, 98%, 50%);
 }
@@ -517,17 +520,26 @@ body.dark-theme .home__description {
   transition: background-color 0.4s, border 0.4s, color 0.4s;
 }
 
-.button__ghost {
-  border: 3px solid hsl(0, 0%, 0%);
-  color: hsl(0, 0%, 0%);
-  padding: 0.5rem;
-  transition: border 0.4s, color 0.4s;
-}
-.button__ghost i {
+.about__social-link {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 95%);
   font-size: 1.25rem;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.3s;
 }
-.button__ghost:hover {
-  border: 3px solid hsl(32, 98%, 50%);
+body.dark-theme .about__social-link {
+  background-color: hsl(0, 0%, 40%);
+}
+.about__social-link:hover {
+  background-color: hsl(32, 98%, 50%);
+}
+@media screen and (min-width: 1150px) {
+  .about__social-link {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
 }
 
 .about {
