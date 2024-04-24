@@ -365,7 +365,7 @@ body.dark-theme .home__shadow {
 }
 
 .home__social-link {
-  background-color: hsl(0, 0%, 40%);
+  background-color: hsl(0, 0%, 0%);
   color: hsl(0, 0%, 95%);
   font-size: 1.25rem;
   padding: 6px;
@@ -374,7 +374,7 @@ body.dark-theme .home__shadow {
   transition: background-color 0.3s;
 }
 .home__social-link:hover {
-  background-color: hsl(0, 0%, 0%);
+  background-color: hsl(32, 98%, 50%);
 }
 @media screen and (min-width: 1150px) {
   .home__social-link {
@@ -1175,6 +1175,9 @@ body.dark-theme .contact__label {
   font-size: 0.813rem;
   margin-bottom: 0.5rem;
 }
+body.dark-theme .contact__social-description--1 {
+  color: hsl(0, 0%, 70%);
+}
 @media screen and (max-width: 576px) {
   .contact__social-description--1 {
     color: hsl(0, 0%, 35%);
@@ -1200,6 +1203,9 @@ body.dark-theme .contact__label {
   .contact__social-description--2 {
     color: hsl(0, 0%, 35%);
   }
+  body.dark-theme .contact__social-description--2 {
+    color: hsl(0, 0%, 70%);
+  }
 }
 
 .contact__social-links {
@@ -1210,16 +1216,22 @@ body.dark-theme .contact__label {
 }
 
 .contact__social-link {
-  background-color: hsl(0, 0%, 40%);
-  padding: 6px;
+  background-color: hsl(0, 0%, 0%);
+  padding: 0.5rem;
   color: hsl(0, 0%, 95%);
   font-size: 1.25rem;
   display: grid;
   place-items: center;
   transition: background-color 0.3s;
 }
+body.dark-theme .contact__social-link {
+  background-color: transparent;
+}
 .contact__social-link:hover {
-  background-color: hsl(14, 98%, 50%);
+  background-color: hsl(32, 98%, 50%);
+}
+body.dark-theme .contact__social-link:hover {
+  background-color: hsl(32, 98%, 50%);
 }
 @media screen and (min-width: 1150px) {
   .contact__social-link {
