@@ -373,9 +373,6 @@ body.dark-theme .home__shadow {
   place-items: center;
   transition: background-color 0.3s;
 }
-body.dark-theme .home__social-link {
-  background-color: hsl(0, 0%, 40%);
-}
 .home__social-link:hover {
   background-color: hsl(32, 98%, 50%);
 }
@@ -520,26 +517,17 @@ body.dark-theme .home__description {
   transition: background-color 0.4s, border 0.4s, color 0.4s;
 }
 
-.about__social-link {
-  background-color: hsl(0, 0%, 0%);
-  color: hsl(0, 0%, 95%);
+.button__ghost {
+  border: 3px solid hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 0%);
+  padding: 0.5rem;
+  transition: border 0.4s, color 0.4s;
+}
+.button__ghost i {
   font-size: 1.25rem;
-  padding: 6px;
-  display: grid;
-  place-items: center;
-  transition: background-color 0.3s;
 }
-body.dark-theme .about__social-link {
-  background-color: hsl(0, 0%, 40%);
-}
-.about__social-link:hover {
-  background-color: hsl(32, 98%, 50%);
-}
-@media screen and (min-width: 1150px) {
-  .about__social-link {
-    font-size: 1.5rem;
-    padding: 0.5rem;
-  }
+.button__ghost:hover {
+  border: 3px solid hsl(32, 98%, 50%);
 }
 
 .about {
@@ -797,13 +785,14 @@ body.dark-theme .projects {
 }
 @media screen and (min-width: 768px) {
   .projects__container {
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: 700px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1150px) {
   .projects__container {
-    grid-template-columns: repeat(3, 352px);
-    padding-block: 3rem 1rem;
+    grid-template-columns: 1050px;
+    justify-content: center;
   }
 }
 

@@ -496,11 +496,6 @@ img {
     place-items: center;
     transition: background-color .3s;
 
-
-    body.dark-theme & {
-        background-color: $black-light;
-    }
-
     &:hover {
         // background-color: $black;
         background-color: $orange;
@@ -649,44 +644,20 @@ img {
     }
 }
 
-.about__social-link {
-    background-color: $black;
-    color: $white;
-    font-size: 1.25rem;
-    padding: 6px;
-    display: grid;
-    place-items: center;
-    transition: background-color .3s;
+.button__ghost {
+    border: 3px solid $black;
+    color: $black;
+    padding: .5rem;
+    transition: border .4s, color .4s;
 
-
-    body.dark-theme & {
-        background-color: $black-light;
+    & i {
+        font-size: 1.25rem;
     }
 
     &:hover {
-        // background-color: $black;
-        background-color: $orange;
-    }
-
-    @media screen and (min-width: 1150px){
-            font-size: 1.5rem;
-            padding: .5rem;
+        border: 3px solid $orange;
     }
 }
-// .button__ghost {
-//     border: 3px solid $black;
-//     color: $black;
-//     padding: .5rem;
-//     transition: border .4s, color .4s;
-
-//     & i {
-//         font-size: 1.25rem;
-//     }
-
-//     &:hover {
-//         border: 3px solid $orange;
-//     }
-// }
 
 //ABOUT
 .about {
@@ -1001,12 +972,16 @@ body.dark-theme {
     }
 
     @media screen and (min-width: 768px) {
-        grid-template-columns: repeat(2, 350px);
+        // grid-template-columns: repeat(2, 350px); //プロジェクトが複数あるとき
+        grid-template-columns: 700px;
+        justify-content: center;
     }
 
     @media screen and (min-width: 1150px){
-        grid-template-columns: repeat(3, 352px);
-        padding-block: 3rem 1rem;
+        // grid-template-columns: repeat(3, 352px); //プロジェクトが複数あるとき
+        // padding-block: 3rem 1rem;
+        grid-template-columns: 1050px;
+        justify-content: center;
     }
 
 }
