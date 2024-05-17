@@ -181,14 +181,28 @@ themeButton.addEventListener('click', ()=> {
 });
 
 
-
+/**
+ *  Image
+ */
 
 document.addEventListener("DOMContentLoaded", function() {
+      /**
+     * Select an image with the class "home__img lazy" and convert the NodeList to an array.
+     * @type {Array.<HTMLElement>}
+     */
     let lazyImages = [].slice.call(document.querySelectorAll(".home__img.lazy"));
     if ("IntersectionObserver" in window) {
+           /**
+         * Observer to handle lazy loading of images.
+         * @type {IntersectionObserver}
+         */
         let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
+                      /**
+                     * Image that is currently intersecting with the viewport.
+                     * @type {HTMLElement}
+                     */
                     let lazyImage = entry.target;
                     lazyImage.src = lazyImage.dataset.src;
                     lazyImage.classList.remove("lazy");
