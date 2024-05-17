@@ -692,10 +692,18 @@ body.dark-theme .about__list {
 
 .about__buttons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
+}
+.about__buttons .download_cv {
+  padding: 1rem 0;
+  color: hsl(0, 0%, 0%);
+}
+body.dark-theme .about__buttons .download_cv {
+  color: hsl(0, 0%, 95%);
 }
 @media screen and (min-width: 1150px) {
   .about__buttons {
