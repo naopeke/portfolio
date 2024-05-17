@@ -702,8 +702,16 @@ body.dark-theme .about__list {
   padding: 1rem 0;
   color: hsl(0, 0%, 0%);
 }
+.about__buttons .download_cv:hover {
+  color: hsl(14, 98%, 50%);
+  transition: color 0.4s;
+}
 body.dark-theme .about__buttons .download_cv {
   color: hsl(0, 0%, 95%);
+}
+body.dark-theme .about__buttons .download_cv:hover {
+  color: hsl(14, 98%, 50%);
+  transition: color 0.4s;
 }
 @media screen and (min-width: 1150px) {
   .about__buttons {

@@ -833,9 +833,19 @@ img {
     & .download_cv {
         padding: 1rem 0;
         color: $black;
-        
+
+        &:hover {
+            color: $red;
+            transition: color .4s;
+        }
+
         body.dark-theme & {
             color: color('dark', 'title-color');
+
+            &:hover {
+                color: $red;
+                transition: color .4s;
+            }
         }
     }
 
