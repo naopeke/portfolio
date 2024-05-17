@@ -182,6 +182,7 @@ themeButton.addEventListener('click', ()=> {
 
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
     let lazyImages = [].slice.call(document.querySelectorAll(".home__img.lazy"));
     if ("IntersectionObserver" in window) {
